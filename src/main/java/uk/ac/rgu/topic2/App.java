@@ -25,7 +25,23 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private Logger logger;
 
+        public void setLogger (Logger logger){
+            this.logger = logger;
+
+public Class MainApp{
+
+
+
+        private static Command [] commands = new Command[10];
+        private String[] words = {"computing","aberdeen", "amphibin","mouse"};
+
+        public void doSomething(){
+            if(this.logger != null){
+                logger.log(msg:"I'm doing something !");
+            }
+        }
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("MyScene"), 640, 480);
@@ -43,7 +59,25 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+       // launch();
+      App instance = new App();
+      ForwardPrintStrategy = new ForwardPrintStrategy();
+      instance.printWords(s);
+      System.out.println(x:"");
+
+
     }
+
+        PrintStrategy s2 = (values) ->{
+            for(int i=values.length -1; i>=0; i--){
+                System.out.println(values[i]);
+
+            }
+
+        };
+
+        instance.printWords(s2);
+    }
+
 
 }
